@@ -1,0 +1,188 @@
+
+Programmierung
+Zur Navigation springen
+Zur Suche springen
+Dieser Artikel behandelt die Tätigkeit der Erstellung von Software. Zu weiteren Bedeutungen siehe Programmierung (Begriffsklärung).
+
+Programmierung (von altgriechisch πρόγραμμα prógramma „öffentlich und schriftlich bekannt gemachte Nachricht, Befehl“)[1] bezeichnet die Tätigkeit, Computerprogramme zu erstellen. Dies ist ein Teilbereich der Softwareentwicklung.[2]
+
+Computerprogramme werden mit Hilfe einer Programmiersprache formuliert („codiert“). Der Programmierer ‚übersetzt‘ dabei die vorgegebenen Anforderungen (z. B. im Pflichtenheft) und Algorithmen in eine gewünschte Programmiersprache. Teilweise werden dazu Codegeneratoren verwendet, die Teile des Programmcodes auf Basis von Modellen (die im Entwurf entstanden sind) automatisch erzeugen.
+
+Beim Programmieren sind wesentliche Aspekte zur Softwarequalität zu berücksichtigen und durch die Gestaltung des Quellcodes umzusetzen. Siehe dazu als Beispiele: Programmierstil, Benutzerfreundlichkeit,[3] Wiederverwendbarkeit/Modularität, Wartbarkeit.
+
+‚Programmieren‘ in erweitertem Sinn umfasst neben der Codeerstellung zahlreiche weitere Tätigkeiten, zum Beispiel das Testen (Entwicklertest) des Programms oder das Erstellen der Programmierdokumentation. Abgrenzen vom Begriff des Programmierens lassen sich andere Tätigkeiten zur Softwareentwicklung wie beispielsweise zum Projektmanagement, zur Anforderungsanalyse oder zur Datenmodellierung.
+
+Abhängig vom Typ und der Einsatzumgebung von Software (z. B. für Systemsoftware, Spielesoftware, Standardsoftware, Grafiksoftware. usw.) können zur Entwicklung unterschiedliche Verfahren oder/und Werkzeuge (wie Programmiersprachen, Testverfahren etc.) zum Einsatz kommen und/oder von spezialisierten Entwicklern ausgeführt werden.
+
+Je nach angewendetem Vorgehensmodell verlaufen die Aktivitäten zur Programmierung in zeitlich voneinander abgegrenzten Projektphasen, parallel oder iterativ. In der Praxis geschieht das Programmieren häufig in Teamarbeit, mit modernen Entwicklungsmethoden (wie Agile Softwareentwicklung) und Programmierwerkzeugen.
+
+Ähnliche Bedeutungen: Umgangssprachlich bezeichnet man gelegentlich auch das Konfigurieren von Haushalts- oder anderer elektrischer Geräte als „Programmieren“. Auch Organisationseinheiten von Unternehmen, in denen Software entwickelt wird, werden oder wurden zum Teil „Programmierung“ genannt.
+Inhaltsverzeichnis
+
+    1 Geschichte
+    2 Qualitätskriterien
+        2.1 Korrektheit
+        2.2 Robustheit
+        2.3 Wartbarkeit
+        2.4 Effizienz
+    3 Effiziente Programmierung
+    4 Arbeitsmittel
+    5 Siehe auch
+    6 Weblinks
+    7 Einzelnachweise
+
+Geschichte
+Siehe auch: Computerprogramm: Geschichte, Geschichte der Programmiersprachen und Programmiersprache – Geschichte
+
+Charles Babbage beschrieb 1834 eine programmierbare Maschine, die Analytical Engine,[4] welche allerdings nie gebaut wurde. Ada Lovelace übersetzte 1843 eine ursprünglich französische Beschreibung der Analytical Engine von Federico Luigi Menabrea ins Englische und fügte eigene Notizen hinzu. Diese Anmerkungen enthielten einen tabellarischen Plan zur Berechnung der Bernoulli-Zahlen, was als das erste Programm bezeichnet wird.[5] 1941 realisierte Konrad Zuse mit dem Z3 die erste programmgesteuerte Rechenmaschine, von 1942 an entwickelte er mit Plankalkül die erste höhere Programmiersprache.[6] Die Mathematikerin Grace Hopper schuf 1949 den ersten Compiler, der Quellcode in Maschinencode übersetzt.[7]
+Qualitätskriterien
+→ Hauptartikel: Softwarequalität
+
+Die Qualität von Software entsteht zu großen Teilen im Rahmen der Tätigkeiten des Programmierens, besonders die folgenden Qualitätskriterien betreffend:
+Korrektheit
+→ Hauptartikel: Programmfehler
+
+Ein Programm muss die im Entwurf gemachten Vorgaben korrekt umsetzen. Dazu muss es in der Regel fehlerfrei sein, wobei beim Programmieren meist zwei verschiedene Arten von Fehlern auftreten:
+
+    Syntaxfehler: Fehlerhaft formulierter Quellcode – man verwendet Formulierungen oder Konstrukte, die so nicht in der verwendeten Programmiersprache vorkommen (Tippfehler, Unkenntnis, …). Syntaxfehler können beim Übersetzen vom Compiler/Interpreter oder Parser erkannt werden und verhindern i. d. R. die Programmausführung.
+    Semantische Fehler: Das Programm verhält sich nicht wie gewünscht, weil möglicherweise der Algorithmus oder seine Umsetzung fehlerhaft war. Semantische Fehler können in der Regel nicht automatisch erkannt, sondern nur durch gewissenhaftes Testen gefunden werden – beispielsweise in Form von Unittests.
+
+Der Übergang zwischen diesen beiden Fehlerarten ist fließend. Beispielsweise wird ein Tippfehler im Code (z. B. „>“ anstatt „<“ in einem Vergleichsbefehl) zu einem gültigen ausführbaren Programm führen, das Resultat dürfte jedoch falsch sein. An anderer Stelle könnte derselbe Fehler ein Syntaxfehler sein.
+Robustheit
+
+Statistisch gesehen wird die meiste Zeit für die Entwicklung von Quelltext benötigt, um auf Fehler oder außergewöhnliche Anwendungs- oder Hardwareumgebungen zu reagieren. Ein Programmtext, der auch bei unvorhergesehenen Fehlern oder ungewöhnlichen Umgebungen sinnvoll reagiert, wird als robust bzw. portabel bezeichnet. Geübte Programmierer können die möglichen Fehler und Laufzeitumgebungen gut einschätzen und strukturieren das Programm und seinen Quelltext dementsprechend. Der Zeitdruck bei der Entwicklung von Anwendungen stellt selbst an erfahrene Programmierer immer höchste Ansprüche hinsichtlich dieses Kriteriums.
+Wartbarkeit
+
+Damit eine Software dauerhaft funktioniert, muss sie wartbar sein. Das heißt, Änderungen wie Bugfixes, Anpassungen und neue Features müssen ohne großen Aufwand eingepflegt werden können. Dies erfordert vor allem, dass der Programmierer keinen zu kurzen, „kryptischen“ Quelltext (oder Quellcode) erzeugen soll, der für andere Entwickler nicht oder nur mit hoher Einarbeitungszeit verständlich ist.
+
+Um solche Probleme zu vermeiden, existieren häufig Namenskonventionen, in denen beispielsweise selbsterklärende (oder auch „sprechende“) Bezeichner/Namen für Variablen etc. zur Verwendung empfohlen/vorgeschrieben werden[8] – oder die Verwendung aussagefähiger Kommentare im Code. Auch eine sinnvolle Aufteilung des Codes in intuitiv verständliche Funktionen und Klassen trägt zum Verständnis und Übersichtlichkeit bei.
+Siehe auch: Programmierstil
+Effizienz
+
+In der Regel stehen einem Programm nur begrenzte Ressourcen (Laufzeit, Speicherverbrauch, Bandbreite) zur Verfügung. Gute Programmierung kann dazu beitragen, unnötigen Ressourcenverbrauch zu reduzieren. Beispielsweise erfolgt dies, indem bei Verwendung großer Datenmengen an mehreren Stellen im Programm nicht jeweils der gesamte Datensatz kopiert wird, sondern nur die Adresse übertragen wird, an der die Daten gespeichert werden.
+Effiziente Programmierung
+
+Gemäß Niklaus Wirth zeichnet sich gute Programmierung[9] zum einen dadurch aus, dass die Funktionen, die die jeweils verwendete Programmierumgebung bereitstellt, möglichst effizient genutzt werden. Insbesondere geht es darum, für neue Aufgabenstellungen das Rad nicht immer wieder neu zu erfinden, wenn bestimmte Funktionen schon bereitgestellt werden (zum Beispiel durch die Programmierumgebung in Form von Programmbibliotheken). Sie zeichnet sich also vor allem dadurch aus, dass ein guter Überblick über den grundsätzlichen Funktionsumfang und die Systematik der von der Programmierumgebung bereitgestellten Funktionen (die in die zehntausende gehen können) möglich ist. Für eine definierte Aufgabenstellung kann in entsprechenden Dokumentationen dann schnell eine verfügbare Funktion ermittelt, eingesetzt und ggf. erweitert werden.
+Arbeitsmittel
+→ Hauptartikel: Programmierwerkzeug
+
+Theoretisch reichen zum Programmieren ein einfacher Texteditor und ein Compiler/Interpreter für die jeweilige Programmiersprache aus. In der Praxis wird jedoch zusätzlich auf eine Reihe von Werkzeugen zurückgegriffen, die typische Programmierarbeiten vereinfachen sollen. Dazu gehören beispielsweise Texteditoren mit speziellen Features wie Syntax-Highlighting, Autovervollständigen und Refactoring – wobei der Übergang zur Integrierten Entwicklungsumgebung (IDE) fließend ist.
+
+Daneben existieren verschiedene Werkzeuge zur Fehlersuche, sog. Debugger, sowie Programme zur Durchführung statischer und dynamischer Tests. Zur Performanzanalyse kann zusätzlich ein Profiler eingesetzt werden.
+
+Arbeiten mehrere Entwickler an derselben Software, kommen meist Versionierungssysteme zum Einsatz, die den Code inklusive früherer Versionen auf einem zentralen Server speichern, auf den alle beteiligten Programmierer Zugriff haben.
+Siehe auch
+
+    Programmiergerät
+    Programmierparadigma
+
+Weblinks
+WiktionaryWiktionary: Programmierung – Bedeutungserklärungen, Wortherkunft, Synonyme, Übersetzungen
+Commons: Programmierung – Sammlung von Bildern, Videos und Audiodateien
+Wikibooks: Das Buchregal "Programmierung" – Lern- und Lehrmaterialien
+
+    Joachim Korb: Die Geschichte der Softwareprogrammierung.
+    Einführung ins Programmieren (für Neueinsteiger)
+    Allgemeine Grundlagen der Programmierung (Online-Buch)
+
+Einzelnachweise
+Wilhelm Pape, Max Sengebusch (Bearb.): Handwörterbuch der griechischen Sprache. 3. Auflage, 6. Abdruck, Vieweg & Sohn, Braunschweig 1914. 1914, abgerufen am 9. Dezember 2015.
+Lerne Programmieren lerneprogrammieren.com Unterschied zwischen Programmierung und Softwareentwicklung
+Sebastian Dörn - Programmieren lernen und Algorithmen verstehen. Abgerufen am 12. Januar 2018.
+http://www.computerhistory.org/babbage/engines/
+Ada Lovelace, aufgerufen am 7. Juni 2016
+https://link.springer.com/chapter/10.1007/978-3-642-18631-8_9
+Grace Hopper, Yale University, aufgerufen am 7. Juni 2016
+Ulrich Kohler, Frauke Kreuter: Datenanalyse mit Stata: Allgemeine Konzepte der Datenanalyse und ihre praktische Anwendung. 4. Auflage. Oldenbourg Wissenschaftsverlag, 2012, ISBN 978-3-486-70921-6, S. 113 (books.google.com – Datenanalyse mit Stata: Allgemeine Konzepte der Datenanalyse und ihre praktische Anwendung – mit „sprechende Variablennamen“ im Abschnitt „5.6 Beschriftung von Variablen“).
+
+    Niklaus Wirth: A Brief History of Software Engineering. In: IEEE Annals of the History of Computing. Band 30, 3, Juli-September, 2008, S. 32–39, doi:10.1109/MAHC.2008.33 (computer.org [PDF; abgerufen am 30. April 2009]).
+
+Normdaten (Sachbegriff): GND: 4076370-5
+Kategorie:
+
+    Programmierung
+
+Navigationsmenü
+
+    Nicht angemeldet
+    Diskussionsseite
+    Beiträge
+    Benutzerkonto erstellen
+    Anmelden
+
+    Artikel
+    Diskussion
+
+    Lesen
+    Bearbeiten
+    Quelltext bearbeiten
+    Versionsgeschichte
+
+Suche
+
+    Hauptseite
+    Themenportale
+    Zufälliger Artikel
+
+Mitmachen
+
+    Artikel verbessern
+    Neuen Artikel anlegen
+    Autorenportal
+    Hilfe
+    Letzte Änderungen
+    Kontakt
+    Spenden
+
+Werkzeuge
+
+    Links auf diese Seite
+    Änderungen an verlinkten Seiten
+    Spezialseiten
+    Permanenter Link
+    Seiten­informationen
+    Artikel zitieren
+    Wikidata-Datenobjekt
+
+Drucken/­exportieren
+
+    Buch erstellen
+    Als PDF herunterladen
+    Druckversion
+
+In anderen Projekten
+
+    Commons
+    Wikiquote
+
+In anderen Sprachen
+
+    English
+    Español
+    Eesti
+    Suomi
+    हिन्दी
+    Русский
+    Svenska
+    اردو
+    中文
+
+Links bearbeiten
+
+    Diese Seite wurde zuletzt am 5. Mai 2021 um 22:01 Uhr bearbeitet.
+    Abrufstatistik · Autoren
+
+    Der Text ist unter der Lizenz „Creative Commons Attribution/Share Alike“ verfügbar; Informationen zu den Urhebern und zum Lizenzstatus eingebundener Mediendateien (etwa Bilder oder Videos) können im Regelfall durch Anklicken dieser abgerufen werden. Möglicherweise unterliegen die Inhalte jeweils zusätzlichen Bedingungen. Durch die Nutzung dieser Website erklären Sie sich mit den Nutzungsbedingungen und der Datenschutzrichtlinie einverstanden.
+    Wikipedia® ist eine eingetragene Marke der Wikimedia Foundation Inc.
+
+    Datenschutz
+    Über Wikipedia
+    Impressum
+    Mobile Ansicht
+    Entwickler
+    Statistiken
+    Stellungnahme zu Cookies
+
+    Wikimedia Foundation
+    Powered by MediaWiki
+

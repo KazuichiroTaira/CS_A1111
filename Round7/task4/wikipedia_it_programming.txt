@@ -1,0 +1,263 @@
+
+Programmazione (informatica)
+Da Wikipedia, l'enciclopedia libera.
+Jump to navigationJump to search
+Niente fonti!
+Questa voce o sezione sull'argomento programmazione non cita le fonti necessarie o quelle presenti sono insufficienti.
+Puoi migliorare questa voce aggiungendo citazioni da fonti attendibili secondo le linee guida sull'uso delle fonti.
+
+Un insieme di manuali di programmazione.
+La programmazione, in informatica, è una fase implementativa dell'intero ciclo di sviluppo del software (vedi ingegneria del software) con l'obiettivo ultimo di soddisfare le specifiche funzionali richieste dal committente secondo una predefinita analisi strutturale del progetto software; più in particolare trattasi dell'insieme delle attività e tecniche che una o più persone specializzate (team), programmatori o sviluppatori (developer), svolgono per creare un programma o applicazione, ossia un software da far eseguire ad un computer, scrivendo il relativo codice sorgente in un determinato linguaggio di programmazione; assieme al lato sistemistico e al data science, costituisce il ramo o filone di produttività in informatica aziendale, detto terziario avanzato.
+
+
+Indice
+1   Descrizione
+1.1 Progettazione di un programma
+1.2 Scelta dell'algoritmo
+1.3 Scelta delle tecniche: i paradigmi di programmazione
+1.4 Linguaggi di programmazione
+1.5 Codifica del programma
+1.6 Verifica del risultato: gli errori di programmazione
+1.7 Esempio: addizione di due numeri
+2   Sviluppo software in ambito aziendale
+2.1 Installazione
+2.2 Implementazione
+3   Ambiti di programmazione
+4   Bibliografia
+5   Voci correlate
+6   Altri progetti
+7   Collegamenti esterni
+Descrizione
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Programma (informatica).
+Con fondamenti di programmazione si indicano le conoscenze basilari che un programmatore deve possedere per la programmazione in un qualunque linguaggio di programmazione. Per la scrittura di righe di codice nei linguaggi di programmazione è sufficiente per un programmatore utilizzare un normale elaboratore testi, o un programma ad hoc detto editor spesso compreso all'interno di un ambiente di sviluppo integrato (IDE). Nel secondo caso il software individua automaticamente gli errori più banali (es. errori di sintassi) che un programmatore può commettere.
+
+I passi con cui si sviluppa un programma efficiente sono simili tra di loro per quasi tutti i contesti di programmazione (aziende, hobby, lavoro, ecc.). Le prime fasi sono strettamente legate alla logica di quello che si va a creare e del suo funzionamento, mentre le ultime sono orientate verso lo specifico linguaggio di programmazione che si intende utilizzare.
+
+La prima operazione da svolgere per la creazione di un qualunque programma è definire nel modo più preciso ed accurato possibile quale problema intendiamo risolvere. Questo vale sia per una semplice funzione matematica che per un complesso database. L'input che il programma riceve è legato all'output che intendiamo restituire dopo l'elaborazione. Questa fase può presentare una grande complessità dovuta al lavoro astratto che impone al programmatore di immaginare il risultato finale e la sua formalizzazione.
+
+Progettazione di un programma
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Ingegneria del software.
+
+Un modello di sviluppo software
+Superata la definizione del problema che si vuole risolvere occorre progettare delle possibili soluzioni, porle a confronto tra loro e risalire a quella più efficiente (ricordando che una soluzione non efficiente per un determinato problema potrebbe essere utile allo sviluppo di altri programmi). Per confrontare l'effettiva differenza tra una soluzione ed un'altra possono essere utilizzati due diversi strumenti:
+
+Uno di essi è il diagramma di flusso: con un grafico molto intuitivo si può illustrare un processo in tutte le fasi che lo caratterizzano. Ogni fase è collegata con le altre dalle linee di flusso che indicano la direzione del processo interno al programma.
+Un efficace metodo di progettazione è lo pseudocodice, una forma di scrittura in codice affine alla lingua parlata dal programmatore. La sua stesura è simile ad una scaletta di operazioni che si definiscono quando si deve eseguire una determinata azione. La scrittura dello pseudocodice deve essere dettagliata almeno quanto il codice finale, ma rispetto ad esso non si richiede una sintassi precisa lasciando il programmatore libero di concentrarsi sui problemi principali del programma.
+Scelta dell'algoritmo
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Algoritmo.
+
+Esempio di diagramma di flusso di un algoritmo
+Al fine di creare un programma efficiente occorre progettarne con attenzione l'algoritmo. Ad esempio potremmo creare un algoritmo che esegue i seguenti passi:
+
+Esamina una lista di numeri e riconosci il minore;
+Assegna il numero minore alla variabile X;
+Stampa la variabile X;
+È importante precisare che la lista di passi deve contenere istruzioni chiare, precise e non ambigue, ovvero il cui significato non dipenda dal contesto in cui lo si scrive, ma sia chiaramente identificabile.
+
+I programmi informatici risultano essere molto più articolati di un processo lineare come l'addizione di due numeri. Per dare al programma una struttura più complessa si utilizzano i seguenti strumenti:
+
+Le diramazioni consistono nel fornire al codice delle funzioni che possono cambiare lo svolgimento dell'algoritmo a seconda del risultato della condizione espressa.
+I cicli sono sequenze di istruzioni eseguite ripetutamente fin quando non viene soddisfatta una determinata condizione. Ogni ripetizione è detta iterazione.
+I programmi possono inoltre essere divisi in sezioni in modo che i vari compiti possano essere eseguiti attraverso sequenze più semplici di passi. A tale scopo viene suddiviso il programma in funzioni. Il programmatore esperto salta spesso questa fase di sviluppo in termini di algoritmo e passa direttamente alla fase successiva pensando direttamente alla soluzione algoritmica del problema dato in termini di linguaggio di codifica ovvero linguaggio di programmazione o in pseudocodice.
+
+Scelta delle tecniche: i paradigmi di programmazione
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Paradigma di programmazione e Strumenti di controllo.
+Esistono varie tecniche di programmazione, le più comuni ed utilizzate sono le seguenti:
+
+Programmazione non strutturata - in cui il programma è costituito da un unico blocco di istruzioni (detto main) che vengono eseguite in maniera sequenziale.
+Programmazione procedurale - in cui vi sono blocchi di istruzioni che fungono da sottoprogrammi e svolgono funzioni ben definite.
+Programmazione modulare - in cui è possibile utilizzare procedure messe a disposizione da altri programmi e permettere a questi di poter utilizzare le proprie.
+Programmazione orientata agli oggetti - in cui vengono creati degli "oggetti" che possono funzionare autonomamente o interagire tra di loro. Ogni oggetto possiede in sé delle specifiche proprietà e funzioni (se ipotizziamo come oggetto un'automobile, una caratteristica sarà il suo colore o la sua marca e le funzioni saranno l'accelerare o il rallentare). Ciascun paradigma può sfruttare uno o più linguaggi di programmazione a basso, medio o alto livello di astrazione.
+Linguaggi di programmazione
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Linguaggio di programmazione e Piattaforma (informatica).
+
+Esempio di codice sorgente scritto in linguaggio C++
+
+Esempio di programma scritto in Java
+I linguaggi di programmazione sono molti e si distinguono principalmente in due categorie: interpretati e compilati.
+
+I linguaggi interpretati più diffusi sono:
+
+JavaScript
+PHP
+Ruby
+Python
+Perl
+BASIC, anche se esistono diverse versioni compilate e pseudo-compilate, come Turbo Basic e Visual Basic.
+Inoltre sono interpretati anche gli script di shell (i cosiddetti file di batch) e gli altri script in uso su Internet (Jscript, VBScript, Batch...). Il codice di un programma interpretato viene salvato così com'è, e viene poi letto da un interprete, che è un programma che gira sul sistema operativo in uso. I linguaggi di programmazione compilati richiedono invece che il codice, una volta terminato, sia processato da un compilatore che, convertendolo in linguaggio macchina, ne permetta l'esecuzione da parte della CPU.
+
+I linguaggi compilati più famosi sono:
+
+C
+C++ (linguaggio orientato agli oggetti derivato dal C)
+Pascal (solitamente usato a scopo didattico)
+Cobol
+I programmi interpretati sono più lenti ma più facili da creare e girano su molti sistemi operativi, a patto di avere lo stesso interprete, e che il dialetto del linguaggio sia comune. I linguaggi compilati, molto spesso, hanno invece degli standard ISO, o comunque regole universali, le quali permettono di compilare un programma senza modifiche su più architetture, anche da una sola macchina, a patto di avere un compilatore adeguato.
+
+Java è pseudocompilato, ossia viene tradotto in un linguaggio intermedio, detto bytecode, il quale è una specie di linguaggio macchina, che viene poi passato all'interprete, che deve essere disponibile per il tipo di macchina che si vuole utilizzare. Il Visual Basic, per contro, non è un linguaggio standard, ma un ambiente di sviluppo creato per sviluppare programmi in un Basic ad oggetti sviluppato dalla Microsoft, e come tale disponibile solo sui loro OS. Non esistendo uno standard riconosciuto, non viene garantita la compatibilità tra versioni successive, e non è possibile utilizzarlo pienamente su altri sistemi operativi o altre CPU che quelle supportate dalla Microsoft.
+
+Codifica del programma
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Teorema di Böhm-Jacopini, Codice sorgente, Ambiente di sviluppo integrato e Ambiente di esecuzione.
+
+Codice sorgente scritto in Python
+Avviene in questa fase la scelta del paradigma di programmazione e del relativo linguaggio di programmazione con cui sviluppare il progetto (es. Java, C++, BASIC, Perl, ecc.), passando dai diagrammi di flusso o dallo pseudocodice, ad una sintassi più rigorosa e specifica del linguaggio scelto, redigendo il codice sorgente.
+
+Al riguardo un teorema dell'informatica teorica (il Teorema di Böhm-Jacopini) afferma che per la codifica dell'algoritmo nel codice sorgente di un certo linguaggio è necessario l'uso opportuno, eventualmente combinato, di solo tre strutture di controllo del flusso di esecuzione: la sequenza o blocco di istruzioni, la selezione e l'iterazione appoggiandosi all'uso di variabili, costanti, tipi di dato, puntatori, operatori aritmetici e logici, strutture dati, funzioni, parametri, istruzioni di standard input, standard output e standard error ecc.
+
+L'operazione di codifica è quella più soggetta ad errori di natura logica e sintattica. In teoria il programma potrebbe essere pronto in questa fase, ma in realtà esso presenta nella quasi totalità dei casi degli errori (bug), che verranno analizzati con la fase successiva. Tipicamente lo sviluppo di un'applicazione avviene in locale sul PC dello sviluppatore che potrà operare una prima fase di test verificando la bontà o meno dell'output del programma svolto.
+
+Talvolta un progetto software è portato avanti da una community di utenti distribuita in rete attiva attraverso newsgroup, come accade ad esempio per diverse distribuzioni GNU/Linux. Quando da un progetto software se ne sviluppa un altro sullo stesso tipo di programma, ma portato avanti da un'altra community si parla di fork.
+
+Verifica del risultato: gli errori di programmazione
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Bug e Debugging.
+
+Attività di debugging
+Completato il programma è frequente la presenza di errori di programmazione o bug derivanti da ragioni varie che possono evidenziarsi durante lo sviluppo e l'esecuzione di un codice. Questi errori possono essere essenzialmente in tre principali categorie: errori di sintassi, errori di logica ed errori di runtime. Tutti questi errori vanno necessariamente eliminati pena il malfunzionamento o il blocco dell'esecuzione del programma stesso.
+
+La fase di verifica e di messa a punto del programma ha lo scopo di ricercare e correggere gli errori riscontrati ed è detta debugging. Si tratta di una fase molto lunga ed importante in cui il programmatore verifica la bontà del proprio lavoro. La correzione di un bug potrebbe essere causa di nuovi errori ed occorre quindi prestare la massima attenzione.
+
+Per evitare un debugging di un programma troppo complesso ed articolato è preferibile creare un prototipo, ovvero una versione del risultato finale che non presenta in sé tutte le funzioni previste dal progetto originale, ottenendo una maggiore velocità di correzione dei bug principali. Alla fine di questa fase avremo il prodotto finito. Le operazioni svolte durante lo sviluppo vanno opportunamente documentate così da rendere più agevole una futura modifica.
+
+Esempio: addizione di due numeri
+Il primo programma didattico che un programmatore in stato di formazione scrive è solitamente Hello world. Un altro programma semplice ed intuitivo è sicuramente quello che presi due numeri in input, restituisce come output la loro somma. A seconda del linguaggio di programmazione che si utilizza la struttura cambia e si articola in maniera diversa.
+
+In un linguaggio di programmazione ad alto livello il programma contiene un'istruzione il cui significato è: nella locazione di memoria C deve essere inserito un numero uguale alla somma dei numeri presenti nelle locazioni A e B.
+In un linguaggio assembly si definiscono tre locazioni di memoria associate a tre nomi simbolici A, B, C. Durante l'esecuzione, il programma carica nella CPU il numero presente in A e lo somma con quello che si trova nella posizione B memorizzando il risultato in C.
+In un linguaggio macchina un determinato comando x1 carica un numero che si trova in una locazione di memoria y1 (generalmente definita da una cifra esadecimale) all'interno della CPU. Il comando x2 somma il numero che si trova nella locazione di memoria y2 con quello caricato precedentemente. Infine un comando x3 trasferisce il risultato ottenuto in una locazione di memoria y3 rendendolo disponibile per nuove operazioni.
+Sviluppo software in ambito aziendale
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Ingegneria del software.
+
+Alcune fasi dello sviluppo software
+Lo sviluppo di un sistema di programmi all'interno di un'azienda fa parte di un processo molto più ampio di analisi e progettazione che tipicamente coinvolge un intero team di analisti/sviluppatori. Il risultato oltre ad essere efficiente deve soddisfare specifiche richieste dell'attività aziendale per cui è pensato.
+
+Inizialmente si procede con una dettagliata analisi dei requisiti che la creazione del programma mira a risolvere (bisogni) detta anche analisi funzionale. L'analista deve proporre queste informazioni e stilare delle proposte idonee in sede di progettazione. Il documento output dell'analisi assume varie denominazioni: specifica funzionale, capitolato, elenco requisiti ma spesso si utilizzano termini in inglese. Spesso per requisiti non si intendono solo le funzioni ma anche: prestazioni, condizioni di utilizzo, specifiche tecnologiche e di hardware e altro. Nella logica del project management si possono affiancare al documento di definizione dei requisiti anche quelli relativi a: tempi, costi, responsabilità, rischi, ecc.
+
+Conclusa l'analisi, si passa alla vera e propria fase di progettazione del nuovo sistema. Tale operazione coinvolge un grande numero di persone e di idee. I migliori progetti saranno scelti e sviluppati secondo un'ottica di guadagno economico e di efficienza. Approvato il progetto migliore si passa allo sviluppo vero e proprio. Ciò consiste nell'acquisto del materiale software (ed eventualmente di quello hardware) necessario alla verifica del funzionamento del nuovo sistema. Segue poi la fase di testing dell'applicazione da parte di un team autonomo che rigira agli sviluppatori eventuali errori o bug per la loro risoluzione.
+
+Per molte aziende il software presente sul mercato risulta spesso inadatto alle proprie esigenze ed è necessario lo sviluppo di programmi personalizzati o la modifica di quelli già esistenti. A questo scopo esistono altre aziende specializzate in questo tipo di servizi affidati dunque in outsourcing (aziende di consulenza informatica).
+
+Installazione
+Magnifying glass icon mgx2.svg  Lo stesso argomento in dettaglio: Deployment.
+Una volta creato e verificato il nuovo sistema, si procede all'installazione dello stesso all'interno dell'azienda ed al suo funzionamento a pieno regime. Tale impatto può essere traumatico per un'azienda abituata a vecchi sistemi, ragion per cui si procede in diverse maniere, secondo il caso:
+
+L'installazione diretta, in cui si disattiva il vecchio sistema e si sostituisce col nuovo appena creato. Se tale sostituzione presenta dei problemi non previsti in fase di sviluppo, non esiste backup dei vecchi programmi, causando enormi problemi. Tale soluzione è adottata soltanto in assenza di alternative valide.
+L'installazione parallela, in cui il lavoro previsto per il nuovo sistema è distribuito in parti uguali su di esso e su quello obsoleto, in modo da far fronte ad un eventuale problema del nuovo utilizzando temporaneamente il vecchio. Quando il nuovo sistema raggiunge un discreto livello di affidabilità, sostituisce totalmente il vecchio.
+L'installazione scaglionata, in cui il nuovo sistema è introdotto per gradi, man mano che vengono risolti gli errori riscontrati, esso sostituisce il vecchio secondo varie fasi. Adottando tale soluzione, eventuali problemi avranno conseguenze meno disastrose interessando soltanto una singola fase. Svantaggio di questo tipo di installazione sono i tempi molto lunghi.
+L'installazione pilota, in cui il nuovo sistema viene utilizzato soltanto per una piccola parte delle attività aziendali e, se funzionante regolarmente, viene esteso a tutta l'azienda. In caso di problemi essi risulteranno ristretti soltanto a quella parte di attività che adotta il nuovo sistema, senza pregiudicare l'intera attività aziendale.
+Implementazione
+Superata l'installazione, il programma fornirà all'azienda un servizio, richiedendo comunque manutenzione, in cui vengono risolti i problemi riscontrati ed introdotti cambiamenti funzionali attui a migliorare le prestazioni dei programmi.
+
+Ambiti di programmazione
+In base alla destinazione d'uso del codice si hanno vari tipi di programmazione quali ad esempio:
+
+Programmazione di applicazioni per dispositivi fissi (personal computer, workstation, mainframe ecc...);
+Programmazione per dispositivi mobili (cellulari, smartphone, palmari, tablet computer ecc..);
+Programmazione per dispositivi server;
+Programmazione per sistemi embedded;
+Programmazione di sistemi operativi;
+Programmazione socket;
+Programmazione Web;
+Programmazione concorrente.
+Programmazione di videogiochi.
+Bibliografia
+Dennis P. Curtin, Kim Foley, Kunal Sen, Cathleen Morin, Informatica di Base, Mc-Graw Hill, 2005
+Voci correlate
+Algoritmo
+Computer
+Ambiente (programmazione)
+Costante (informatica)
+Codice sorgente
+Controllo di versione
+Dato
+Debito tecnico
+Debugging
+Design pattern
+Funzione (informatica)
+Informatica
+Linguaggio di programmazione
+Linguaggio macchina
+Linguaggio assembly
+Linguaggio BASIC
+Modulo (programmazione)
+Oggetto (informatica)
+Parametro (programmazione)
+Programma (informatica)
+Paradigma di programmazione
+Personal Computer
+Programmatore
+Programmazione a eventi
+Programmazione orientata agli oggetti
+Programmazione procedurale
+Programmazione strutturata
+Riflessione (informatica)
+Script
+Shell (informatica)
+Teorema di Böhm-Jacopini
+Variabile (informatica)
+Altri progetti
+Collabora a Wikiquote Wikiquote contiene citazioni di o su programmazione
+Collabora a Wikibooks Wikibooks contiene testi o manuali su programmazione
+Collabora a Wikimedia Commons Wikimedia Commons contiene immagini o altri file su programmazione
+Collegamenti esterni
+(EN) Opere riguardanti Programmazione, su Open Library, Internet Archive. Modifica su Wikidata
+Programmazione.it portale italiano sulla programmazione.
+Canale Programmazione di WebMasterPoint, su webmasterpoint.org.
+Imparare a Programmare libro gratuito sulle basi della programmazione.
+Guida alla programmazione, su html.it.
+Controllo di autorità   Thesaurus BNCF 7541 · LCCN (EN) sh85107310 · GND (DE) 4076370-5 · BNF (FR) cb11932648m (data) · NDL (EN, JA) 00569223
+Informatica Portale Informatica: accedi alle voci di Wikipedia che trattano di informatica
+Categorie: ProgrammazioneTerminologia informaticaSviluppo software[altre]
+Menu di navigazione
+Accesso non effettuato
+discussioni
+contributi
+registrati
+entra
+VoceDiscussione
+LeggiModificaModifica wikitestoCronologiaRicerca
+Cerca in Wikipedia
+Pagina principale
+Ultime modifiche
+Una voce a caso
+Nelle vicinanze
+Vetrina
+Aiuto
+Sportello informazioni
+Comunità
+Portale Comunità
+Bar
+Il Wikipediano
+Fai una donazione
+Contatti
+Strumenti
+Puntano qui
+Modifiche correlate
+Carica su Commons
+Pagine speciali
+Link permanente
+Informazioni pagina
+Cita questa voce
+Elemento Wikidata
+Stampa/esporta
+Crea un libro
+Scarica come PDF
+Versione stampabile
+In altri progetti
+Wikimedia Commons
+Wikiquote
+
+In altre lingue
+Deutsch
+English
+Español
+Eesti
+Suomi
+हिन्दी
+Русский
+Svenska
+中文
+Altre 74
+Modifica collegamenti
+Questa pagina è stata modificata per l'ultima volta il 19 feb 2021 alle 14:25.
+Il testo è disponibile secondo la licenza Creative Commons Attribuzione-Condividi allo stesso modo; possono applicarsi condizioni ulteriori. Vedi le condizioni d'uso per i dettagli.
+Informativa sulla privacyInformazioni su WikipediaAvvertenzeVersione mobileSviluppatoriStatisticheDichiarazione sui cookieWikimedia FoundationPowered by MediaWiki

@@ -1,0 +1,206 @@
+
+Program komputerowy
+Przejdź do nawigacjiPrzejdź do wyszukiwania
+Program komputerowy (ang. computer program) – sekwencja symboli opisująca realizowanie obliczeń zgodnie z pewnymi regułami zwanymi językiem programowania[1]. Program jest zazwyczaj wykonywany przez komputer (np. wyświetlenie strony internetowej), zwykle bezpośrednio, jeśli wyrażony jest w języku zrozumiałym dla danej maszyny lub pośrednio – gdy jest interpretowany przez inny program (interpreter). Program może być ciągiem instrukcji opisujących modyfikacje stanu maszyny, ale może również opisywać obliczenia w inny sposób (np. rachunek lambda).
+
+Formalne wyrażenie metody obliczeniowej w postaci języka zrozumiałego dla człowieka nazywane jest kodem źródłowym, podczas gdy program wyrażony w postaci zrozumiałej dla maszyny (to jest za pomocą ciągu liczb, a bardziej precyzyjnie – zer i jedynek) nazywany jest kodem maszynowym bądź postacią binarną (wykonywalną).
+
+Programy komputerowe można zaklasyfikować według ich zastosowań. Wyróżnia się zatem aplikacje użytkowe, systemy operacyjne, programy narzędziowe, gry wideo, kompilatory i inne. Natomiast programy wbudowane w urządzenia, przechowywane zwykle w pamięci flash, określa się jako firmware.
+
+
+Spis treści
+1   Terminologia
+2   Uruchomienie programu
+3   Program a dane
+4   Programowanie
+5   Zobacz też
+6   Przypisy
+Terminologia
+Określenie „program komputerowy” jest często używane zamiennie z określeniami „oprogramowanie” (ang. software) i „aplikacja”. Pierwszy z tych terminów podkreśla rynkowy charakter programów – programy (lub ich zespoły) często w połączeniu z bibliotekami, dodatkowymi danymi, wyróżniającą się nazwą i wsparciem producenta (dostawcy) stanowią produkt handlowy. Poprzez aplikację natomiast często rozumie się oprogramowanie bliskie użytkownikowi, to znaczy takie, z którym komunikuje się (często za pośrednictwem przyjaznego interfejsu użytkownika), by wykonać określone zadania (np. zredagować dokument).
+
+Uruchomienie programu
+W najprostszym modelu wykonanie programu (zapisanego w postaci zrozumiałej dla maszyny) polega na umieszczeniu go w pamięci operacyjnej komputera i wskazaniu procesorowi adresu pierwszej instrukcji. Po tych czynnościach procesor będzie wykonywał kolejne instrukcje programu, aż do jego zakończenia. Program może zakończyć się w dwojaki sposób:
+
+poprawnie – zgodnie z życzeniem twórcy programu i jego użytkownika;
+błędnie – z powodu awarii sprzętu bądź wykonania przez program niedozwolonej operacji, np. dzielenia przez zero.
+Program komputerowy będący w trakcie wykonania nazywany jest procesem lub zadaniem.
+
+Specjalnym rodzajem programu komputerowego jest system operacyjny (występujący często jako zbiór programów). Odpowiada on za opisaną wyżej czynność ładowania i uruchamiania programu. System operacyjny jest jedynym programem sprawującym kontrolę nad sprzętem. Zarządza on zasobami systemu komputerowego (takimi jak pamięć, czas procesora, dostęp do urządzeń peryferyjnych) przydzielając je według określonych kryteriów uruchamianym programom.
+
+Aby jakikolwiek program mógł zostać uruchomiony, sprzęt musi zostać do tego przygotowany. Odpowiedzialne jest za to na ogół specjalne oprogramowanie układowe wbudowane w architekturę komputera. W komputerach klasy PC oprogramowanie to nosi nazwę BIOS lub UEFI i przygotowuje sprzęt do użycia,a następnie startuje program rozruchowy, który ładuje do pamięci system operacyjny i uruchamia go, tym samym przekazując mu kontrolę nad komputerem.
+
+Jeżeli program nie jest zapisany w postaci binarnej, ale w postaci kodu źródłowego czytelnego dla człowieka, nie może być bezpośrednio wykonany przez procesor. W takim wypadku możliwe są dwa podstawowe rozwiązania. Pierwsze z nich polega na skorzystaniu z pomocy specjalnego programu nazywanego kompilatorem. Kompilator tłumaczy kod źródłowy, zapisany w danym języku programowania, na kod maszynowy, dzięki czemu możliwe staje się jego późniejsze uruchomienie. Drugim rozwiązaniem jest skorzystanie z programu interpretera. Interpreter na bieżąco odczytuje kod źródłowy, analizuje go i wykonuje kolejne porcje przetłumaczonego kodu. Programy przeznaczone do interpretacji często nazywane są skryptami. Prócz tego istnieją jeszcze inne pośrednie rozwiązania jak np. kompilacja do kodu bajtowego, JIT albo CIL.
+
+Program a dane
+Program można podzielić na dwie części (obszary):
+
+część zawierająca kod – składającą się z rozkazów sterujących działaniem procesora;
+część zawierająca dane – składającą się z danych wykorzystywanych i przetwarzanych przez program, np. adresów pamięci, stałych liczbowych, komunikatów tekstowych, danych graficznych itp.
+O ile operowanie na danych przez program jest zupełnie normalne i oczekiwane, o tyle operowanie programu na własnym kodzie nie jest typową praktyką. Przewidywanie zachowań programów, które modyfikują własny kod w czasie działania, jest bardzo trudne. Dlatego na ogół przyjmuje się założenie (lub wręcz jest to wymuszane przez system wykonawczy), że obszar kodu programu w pamięci operacyjnej jest tylko do odczytu. Programy nie respektujące tego podejścia to programy samomodyfikujące się, co jest charakterystyczne np. dla wirusów polimorficznych.
+
+Programowanie
+Programowanie jest procesem tworzenia programów (względnie: oprogramowania). Jest to proces cykliczny polegający na realizacji kolejnych etapów:
+
+edycji kodu źródłowego,
+uruchamianiu programu,
+analizie działania i rejestrowaniu występujących błędów,
+powrocie do edycji kodu źródłowego (pkt 1) w celu poprawienia błędów lub dalszego poszerzania funkcjonalności.
+Osobę zajmującą się programowaniem nazywa się programistą. W inżynierii oprogramowania programowanie jest także przedstawiane jako jeden z etapów powstawania i rozwoju oprogramowania.
+
+W dziedzinie programowania wyróżnia się pewne modele działania takie, jak programowanie zespołowe czy programowanie parami. W dobie spadku cen sprzętu komputerowego, dostępności oprogramowania i literatury programowanie może mieć również charakter hobbystyczny. W ciągu lat programowanie stało się rozległą dziedziną o silnych podstawach teoretycznych. Związane są z nim pojęcia takie jak: algorytm, struktury danych, metody numeryczne, programowanie obiektowe, kryptografia i wiele innych.
+
+Zobacz też
+    Zobacz hasło program komputerowy w Wikisłowniku
+aplikacja (informatyka)
+kompilator
+oprogramowanie
+zintegrowane środowisko programistyczne
+Przypisy
+ Mordechai Ben-Ari: Understanding Programming Languages. Chichester: John Wiley & Sons, 1996.
+Kontrola autorytatywna (algorytm):LCCN: sh85029524GND: 4047394-6BNE: XX526558
+Kategoria: Oprogramowanie
+Menu nawigacyjne
+Nie jesteś zalogowany
+Dyskusja
+Edycje
+Utwórz konto
+Zaloguj się
+ArtykułDyskusja
+CzytajEdytujEdytuj kod źródłowyHistoria i autorzySzukaj
+Przeszukaj Wikipedię
+Strona główna
+Losuj artykuł
+Kategorie artykułów
+Najlepsze artykuły
+Częste pytania (FAQ)
+Dla czytelników
+O Wikipedii
+Zgłoś błąd
+Kontakt
+Wspomóż Wikipedię
+Dla wikipedystów
+Pierwsze kroki
+Portal wikipedystów
+Ogłoszenia
+Zasady
+Pomoc
+Ostatnie zmiany
+Narzędzia
+Linkujące
+Zmiany w linkowanych
+Prześlij plik
+Strony specjalne
+Link do tej wersji
+Informacje o tej stronie
+Cytowanie tego artykułu
+Element Wikidanych
+Zaproponuj do mediów społecznościowych
+Drukuj lub eksportuj
+Utwórz książkę
+Pobierz jako PDF
+Wersja do druku
+W innych projektach
+Wikimedia Commons
+
+W innych językach
+Afrikaans
+العربية
+অসমীয়া
+Asturianu
+Azərbaycanca
+বাংলা
+Bân-lâm-gú
+Беларуская
+Беларуская (тарашкевіца)
+भोजपुरी
+Български
+Bosanski
+Brezhoneg
+Català
+Čeština
+Cymraeg
+Deutsch
+Eesti
+Ελληνικά
+English
+Español
+Esperanto
+Euskara
+فارسی
+Français
+Frysk
+Gaeilge
+Gàidhlig
+Galego
+한국어
+Հայերեն
+हिन्दी
+Hrvatski
+Ido
+Bahasa Indonesia
+Íslenska
+Italiano
+עברית
+ქართული
+Қазақша
+Kiswahili
+Кыргызча
+ລາວ
+Latina
+Latviešu
+Lëtzebuergesch
+La .lojban.
+Magyar
+Македонски
+Malagasy
+മലയാളം
+მარგალური
+Bahasa Melayu
+Mìng-dĕ̤ng-ngṳ̄
+Mirandés
+Монгол
+မြန်မာဘာသာ
+Nederlands
+नेपाली
+日本語
+Norsk bokmål
+Олык марий
+Oʻzbekcha/ўзбекча
+پنجابی
+Português
+Română
+Runa Simi
+Русиньскый
+Русский
+Scots
+Shqip
+Simple English
+Slovenčina
+Slovenščina
+Српски / srpski
+Srpskohrvatski / српскохрватски
+Suomi
+Svenska
+Tagalog
+தமிழ்
+Taqbaylit
+తెలుగు
+ไทย
+Тоҷикӣ
+Türkçe
+ᨅᨔ ᨕᨘᨁᨗ
+Українська
+اردو
+Tiếng Việt
+Võro
+Walon
+文言
+Wolof
+吴语
+ייִדיש
+粵語
+中文
+Edytuj linki
+Tę stronę ostatnio edytowano 6 lut 2021, 10:21.
+Tekst udostępniany na licencji Creative Commons: uznanie autorstwa, na tych samych warunkach, z możliwością obowiązywania dodatkowych ograniczeń. Zobacz szczegółowe informacje o warunkach korzystania.
+Polityka prywatnościO WikipediiKorzystasz z Wikipedii tylko na własną odpowiedzialnośćWersja mobilnaDla deweloperówStatystykiKomunikat na temat ciasteczekWikimedia FoundationPowered by MediaWiki

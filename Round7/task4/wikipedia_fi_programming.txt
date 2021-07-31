@@ -1,0 +1,56 @@
+Ohjelmointi
+Siirry navigaatioon
+Siirry hakuun
+Gnome-devel.svg
+	Tätä artikkelia tai sen osaa on pyydetty parannettavaksi, koska se ei täytä Wikipedian laatuvaatimuksia.
+Voit auttaa Wikipediaa parantamalla artikkelia tai merkitsemällä ongelmat tarkemmin. Lisää tietoa saattaa olla keskustelusivulla.
+Tarkennus: Ei yhtään viitettä, tarvitsee lähteistystä
+Ohjelmointia Java-ohjelmointikielellä
+
+Ohjelmointi tarkoittaa tietokoneelle tai vastaavalle laitteelle jollakin tavalla, tyypillisesti kirjoittamalla, annettavia toimintaohjeita formaalilla kielellä.
+
+Tietokoneen suoritin ymmärtää suoraan vain ohjelmia, jotka on kirjoitettu konekielellä. Konekieli koostuu yksinkertaisista operaatioista, esimerkiksi "vähennä rekisterin 3 arvosta rekisterin 5 arvo". Ohjelmointi suoraan konekielellä on mahdollista, mutta hyvin hidasta ja virhealtista johtuen prosessorien eroavaisuuksista. Konekielellä ohjelmia kirjoitetaan usein vain poikkeustapauksissa. Useammin käytetään symbolista konekieltä (ks. assembly). On huomattavaa, että myös symbolinen konekieli kääntyy viime kädessä ykkösiksi ja nolliksi, jotka vastaavat prosessorin transistoreiden päälle/pois tilaa.
+
+Tavallisesti tietokonetta ohjelmoidaan käyttämällä jotakin ohjelmointikieltä. Ohjelmointikielissä käytetään luettavia symboleja ja sovittuja koodeja. Esimerkiksi Pascal-kielisen ohjelman rivi palkka := palkka-vero; voisi kääntyä edellä mainituksi konekielen operaatioksi. Ohjelmointikielellä kirjoitettu lähdekoodi joko käännetään konekielelle tai tulkataan kieltä suorittavalla ohjelmalla. Käännettäessä koko ohjelma muutetaan kerralla konekieleksi, minkä jälkeen siihen liitetään tarvittavat kirjastoaliohjelmat. Tämän tuloksena saatu ohjelma voidaan suorittaa ilman kääntäjää. Tulkattaessa käännetään pieni osa kerrallaan (eikä yleensä edes konekielelle asti), suoritetaan se ja käännetään seuraava osa ja niin edelleen. Ohjelman suoritus vaatii siis joka kerta tulkin.
+Sisällysluettelo
+
+    1 Ohjelmoinnin kehittyminen
+        1.1 1950-luvulla
+        1.2 1960-luvulta 1980-luvun puoliväliin
+        1.3 1980-luvun puolivälissä
+        1.4 1990-luvulla
+        1.5 2000-luvun ensimmäisellä vuosikymmenellä
+    2 Mahdollisia tulevaisuuden ohjelmointimenetelmiä
+    3 Aiheesta muualla
+
+Ohjelmoinnin kehittyminen
+1950-luvulla
+
+Ensimmäinen moderni ohjelmointikieli oli vuonna 1957 julkaistu FORTRAN (FORmula TRANslator, suom. "kaavakääntäjä"), joka keskittyi matemaattisten lausekkeiden kääntämiseen konekielelle. Vuonna 1958 julkaistiin ALGOL (ALGOrithmic Language) ja LISP (LISt Processor, suom. "listakäsittelijä"), joka pionerisoi useita ohjelmointikielien ominaisuuksia, mm. ehtolausekkeet, rekursion ja dynaamisen tyypityksen. Vuosikymmenen lopulla kaupallis-hallinnolliset sovellukset yleistyivät ja tietojenkäsittely alkoi siirtyä akatemiasta liike-elämään. Tämän kehityksen seurauksena vuonna 1959 julkaistiin COBOL (COmmon Business-Oriented Language, suom. "yhteinen liiketoiminta-suuntautunut kieli").
+1960-luvulta 1980-luvun puoliväliin
+
+Historiallisesti yleisin tulkattava ohjelmointikieli on ensimmäisen kerran vuonna 1964 esitelty BASIC-ohjelmointikieli ja sen monet versiot. BASIC-kielessä ei ole kehittyneitä rakenteita, mutta vaivattoman käyttönsä ja helposti tehtävän tulkkinsa vuoksi se saavutti suosiota alkuperäisen opetustarkoituksensa ulkopuoleltakin.
+
+Tietojenkäsittelytiede kehittyi vähitellen kypsäksi tieteenalaksi. 1960-luvun alkupuolella ALGOL jäi hallitsevaksi ohjelmointikielityypiksi ongelmien ratkaisuun pyrkivään algoritmiseen eli proseduraaliseen ohjelmointiin. Algol-perinnettä ylläpitivät siitä kehitetyt kielet kuten Pascal ja C. Tämäntyyppistä ohjelmointia leimaavat hyppyjen korvaaminen toistorakenteilla, nimetyt ja parametrisoidut ohjelmanosat eli aliohjelmat muuttujien vaikutusalueen rajoittaminen ja peittäminen sekä muuttujien staattinen tyypitys (käännöksessä esimerkiksi tarkastetaan, ettei tuotetulla ohjelmalla voi sijoittaa kokonaisluvuksi määriteltyyn muuttujaan merkkijonoa). Tärkeää on myös kielen kääntämisen yksinkertaistaminen tekemällä kieli soveltuvaksi erilliseen selaus- ja jäsentämisvaiheeseen.
+
+Myöhemmissä 1980-luvun proseduraalisissa kielissä kehitettiin keinoja modularisoida ohjelmia lisää, abstrakteja tietotyyppejä ja moduulien välisiä sopimuksia (ohjelmointikielet Modula-2, Modula-3, Oberon, Clu ja Eiffel).
+
+Algol-tyyppisissä ohjelmointikielissä on hyvin tärkeää, että ohjelma kääntyy tehokkaasti konekieleksi. Nämä ohjelmointikielet soveltuvat suuren ohjelmoijajoukon yhteistyössä tekemien ohjelmointiprojektien tekemiseen. Tämä traditio huipentui jossain määrin Yhdysvaltain puolustusministeriön vuonna 1980 määrittelemässä Ada-ohjelmointikielessä, eikä sen jälkeen ole vakavasti määritelty tai otettu käyttöön puhtaasti proseduraalisia Algol-tyyppisiä ohjelmointikieliä.
+1980-luvun puolivälissä
+
+Japanissa aloitettiin vuonna 1982 Viidennen sukupolven tietokonejärjestelmän (第五世代コンピュータ, Daigosedai konpyuta) kehittäminen, joka olisi kauttaaltaan hajautettu sekä logiikkaohjelmoitu paradigmamuutos. Osittain vastauksena siihen, Yhdysvallat aloitti omalla tahollaan voimakkaan panostamisen älykkäisiin järjestelmiin. Voimakas panostaminen tekoälyn tutkimiseen ei kuitenkaan johtanut niin suuriin läpimurtoihin kuin oli odotettu. Japani lopetti Viidennen sukupolven tietokonejärjestelmän kehittämisen, ja vastaavasti Yhdysvallat lopetti monien projektien rahoittamisen. Sen seurauksena vuosikymmenen lopun rahoituksen tyrehtymisestä käytettiin ilmaisua tekoälytalvi (AI Winter).
+1990-luvulla
+
+Proseduraalisen ohjelmoinnin seuraaja 1980-luvun loppupuolelta asti on ollut olio-ohjelmointi. Ensimmäinen olio-ohjelmointikieli on vuodelta 1968 oleva Simula. Varsinaisen olio-ohjelmointi-ilmiön aloittanut ohjelmointikieli oli kuitenkin Smalltalk ja valta-asemaan olio-ohjelmoinnin nosti C++-ohjelmointikieli. Olio-ohjelmoinnissa maailma mallitetaan itsenäisiksi olioiksi, jotka voivat periä ominaisuuksilta muilta olioluokilta. Oliot voivat kommunikoida vain viesteillä, metodeilla, niiden tilaa ei voi muuten kysellä. Olio-ohjelmoinnissa tärkeää on koodin uudelleenkäytettävyys eri tarkoituksiin, ei enää ohjelman kääntyminen tehokkaaksi konekieleksi.
+
+1990-luvulla myös käyttöliittymien tekeminen yksinkertaistui ja standardoitui niin, ettei käyttöliittymän osuus ollut enää suurin osa tyypillisen sovelluksen tekemiseen kuluvasta työpanoksesta.
+2000-luvun ensimmäisellä vuosikymmenellä
+
+Henkilökohtaisten tietokoneiden myötä henkilökohtaisten hyötyohjelmien käyttö lisääntyi. Näissä käyttäjät pääsevät itse ohjelmoimaan esimerkiksi komentosarjakielten avulla. Komentosarjakielet ovat usein tulkattavia tai "esikäännettyjä" (missä yhdistyy tulkkauksen vaivattomuus ja kääntämisen tehokkuus), eikä tärkeintä ole enää ehdottoman nopea suoritus. Uusimmissa komentosarjakielissä käytetään myös abstraktioita, joiden toteuttaminen kääntämällä ei olisi mielekästä tai edes mahdollista (esimerkiksi koodin dynaaminen evaluointi). Merkittävimmät edistysaskeleet ohjelmointikielissä 1995-2004 ovat tapahtuneet komentosarjakielten alueella. Merkittäviä uusia tulkattavia kieliä ovat Perl, Python, Ruby ja Gambas.
+
+Välivaiheen tavukoodiksi kääntämistä tukevia kieliä ovat muun muassa Java ja C#.
+Mahdollisia tulevaisuuden ohjelmointimenetelmiä
+
+Ohjelmointikielet voivat perustua myös nykyisestä täysin poikkeaviin malleihin ohjelmoinnista. Esimerkiksi ohjelmointi voi perustua rinnakkaiseen käsittelyyn (CSP, Occam, LOTOS), logiikkaan (Prolog), relaatiomalliin (vrt. relaatiotietokanta), kaksisuuntaisiin rajoitteisiin (TeX Metafont), tiedon monenkertaiseen uudelleenkirjoittamiseen tai tiedon luokitteluun. Tietotekniikassa on odotettavissa rinnakkaisen käsittelyn huima yleistyminen, jolloin todennäköisesti ohjelmointikielten seuraavat edistysaskeleet liittyvät rinnakkaisuuden käyttöön.
+
+Tulevaisuudessa myös ohjelman ja laitteiston raja hämärtyy ohjelmointikielien ja laitteistokuvauskielten lähestyessä toisiaan, jolloin on mahdollista, että osa tuotetusta ohjelmasta kääntyy konekielelle, osa suorittimen mikrokoodiksi, osa porttilogiikaksi ja osa mikropiireiksi (esimerkiksi ASIC tai FPGA). Esimerkiksi VHDL ja SystemC ovat kieliä, joilla kirjoitettu koodi on muunnettavissa laitteistoksi ja jälkimmäinen vastaa ominaisuuksiltaan C++-ohjelmointikieltä.

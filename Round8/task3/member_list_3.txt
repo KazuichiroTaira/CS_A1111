@@ -1,0 +1,8 @@
+11227;Teekkari Teemu;Jamerantaival 3 C 346, 02150 Espoo;050-111222
+5522;Teekkari Tiina;Jamerantaival 10 D 45, 02150 Espoo;041-334455;chair
+1458
+1459;Rakentaja Riina;Kuutamokatu 3 C 15, 02210 Espoo
+123;Rakentaja Reiska;secretary
+
+447767;Virtanen Vikke
+Virtanen Paula

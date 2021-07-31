@@ -1,0 +1,200 @@
+
+Programmering
+Hoppa till navigeringHoppa till sök
+Question book-4.svg
+Den här artikeln behöver källhänvisningar för att kunna verifieras. (2015-02)
+Åtgärda genom att lägga till pålitliga källor (gärna som fotnoter). Uppgifter utan källhänvisning kan ifrågasättas och tas bort utan att det behöver diskuteras på diskussionssidan.
+
+En programstump i BASIC.
+Programmering handlar om att instruera en maskin eller del av en maskin, till exempel en mikrodator, dator, robot eller NC-maskin att utföra ett visst arbete. Personen som utför detta hantverk brukar ofta tituleras programmerare. Programmering är en del av det vidare begreppet programvaruutveckling eller mjukvaruutveckling som även innefattar aktiviteter som sammanställning av krav, mjukvarudesign och testning. När man programmerar skriver man ett program och man använder ett programspråk. Olika delar av ett program kan vara skrivet i olika programspråk. Maskinen förstår normalt inte programspråket direkt. Detta måste översättas till den maskinkod som maskinen är konstruerad att direkt förstå. Programmering direkt i maskinkod förekommer praktiskt taget inte alls eftersom det är för arbetskrävande. Olika typer av maskiner har helt olika uppsättningar instruktioner i sin maskinkod. Begrepp förknippade med programmering är bland annat slingor och uppställningar.
+
+
+Innehåll
+1   Olika slags programmering
+2   Teorier om programmering
+2.1 Strukturerad programmering
+2.2 Funktionell programmering
+2.3 Objektorienterad programmering
+2.4 Logikprogrammering
+3   Historia
+4   Exempel
+5   Se även
+6   Referenser
+6.1 Noter
+7   Externa länkar
+Olika slags programmering
+Programmering kan ske på olika abstraktionsnivåer. Närmast hårdvaran, förutom maskinkod, ligger assemblerprogrammering där man använder ett assemblerspråk. Ett sådant språk har i det närmaste en direktöversättning till maskinkod, det vill säga de instruktioner man skriver motsvaras direkt av instruktioner i maskinkod, men använder en för människan mer läsbar form än maskinskodens ettor och nollor. Till exempel kan "SR 1,2" betyda "Subtrahera innehållet i register nummer 1 med innehållet i register nr 2". Assemblerspråket, som oftast också tillåter makro-instruktioner, måste översättas till maskinkod med hjälp av ett speciellt program: en assemblator eller något liknande.
+
+På nästa nivå kommer allmänna programspråk (engelska: general purpose computer languages) som till exempel C, Pascal och Java. I ett sådant språk motsvarar en sats eller instruktion normalt många instruktioner i maskinspråket. Till exempel kan satsen "saldo = tidigaresaldo - uttag;" motsvara maskininstruktioner för att hämta data från minnet till register, subtrahera innehållet i register och skriva tillbaka resultatet till minnet. Ett sådant program översätts, kompileras, till maskinkod av en kompilator eller interpreteras av en tolk. Ofta skiljer man också här mellan maskinnära språk som C och högnivåspråk där en större del av funktionaliteten beskrivs abstrakt. Högnivåspråk kan också användas som term för språk med högre abstraktionsnivå än assembler.
+
+Ytterligera en abstraktionsnivå uppnås när man inte längre direkt beskriver hur något ska utföras utan snarare vad som ska utföras. Detta förutsätter att man begränsat problemområdet på något sätt så att tolkaren eller kompilatorn kan använda färdiga dellösningar som sätts ihop till en totallösning för det aktuella problemet. Exempel på sådana språk är RPG för rapportgenerering. Också allmänna programspråk kan vara konstruerade för en viss uppgift, såsom PostScript för sidbeskrivning eller R för statistiska problem.
+
+Andra indelningar är de i språk som skall tolkas eller kompileras och enligt programmeringsparadigm (funktionell, procedurell, objektorienterad programmering eller liknande).
+
+Programmering kan också delas in efter vad programmet utför. Närmast hårdvaran kommer här styrning av hårdvarukomponenter genom mikroprogrammering, till exempel BIOS i en persondator eller drivrutiner för olika utrustningar. Nästa nivå är operativsystemet som fördelar och administrerar datorns resurser och gör datorn allmänt tillgänglig för människan genom ett användargränssnitt. Slutligen kommer nivån med alla olika användarprogram som ordbehandlare, webbläsare och datorspel. De första typerna av programmering görs av hårdvaruleverantörer, men operativsystem programmeras numera också av fristående programvaruleverantörer, som Microsoft, Apple Computer, Sun Microsystems, eller i distribuerade frivilligprojekt med öppen källkod.
+
+Ibland använder man benämningen programvara (även ”mjukvara”) för en samling program och deras tillhörande data.
+
+Teorier om programmering
+Sedan programmeringens barndom på 1950- och 60-talet har många olika idéer och läror om programmering och hur man bäst organiserar och strukturerar framför allt stora program framförts. Parallellt med detta har hela tiden nya programspråk konstruerats för att ge stöd för dessa olika programmeringsparadigm. De problem med programmering som man försökt lösa har bland annat varit:
+
+Stora program är svåra att förstå och överblicka.
+Program som ändrats många gånger blir svårare och svårare att överblicka och förstå.
+Ändringar i ett program får ibland följder som man inte förutsett eller önskat.
+För att ändra en funktion i ett existerande program måste man ibland göra ändringar på många ställen i koden, trots att förändringen man vill göra kan tyckas trivial.
+Programmering kan ta lång tid. Tillgängliga resurser räcker inte till.
+Program gjorda av en person kan vara svåra att förstå för en annan person, eller till och med samma person, en viss tid efteråt.
+"Hur många fel man än rättar i ett program, så finns det alltid ytterligare fel kvar som man inte upptäckt."
+Strukturerad programmering
+Huvudartikel: Strukturerad programmering
+
+1968 skrev Edsger Dijkstra en klassisk artikel Go to statement considered harmful som blev början till det som kom att kallas strukturerad programmering. Dijkstra hävdade att ett oreglerat användande av hopp-satser i ett program ledde till oöverblickbara och ohanterliga program. Resultatet blev lätt vad man brukade kalla spagettiprogrammering med hopp fram och tillbaka och fel som var svåra att spåra. Lösningen var att endast använda strukturerade satser som if-then-else och do-while istället för explicita hoppsatser. Man visade också att det alltid går att omforma ett ostrukturerat program till ett strukturerat program med samma funktion. Dessa idéer är numera allmänt accepterade och de flesta moderna programspråk saknar till och med explicita hoppsatser. Man kan nog säga de problem som strukturerad programmering försökte lösa mycket hängde ihop med de tidiga programspråken som Fortran och COBOL och de möjligheter till spagettikodning som fanns i dessa.
+
+Funktionell programmering
+Många idéer uppstod också om på vilket sätt stora program skulle delas upp i mindre bitar, modulariseras, och hur dessa delar skulle tillåtas påverka varandra. En ståndpunkt representeras av funktionell programmering där bitarna, funktionerna, inte kan påverka andra bitar över huvud taget. Många språk räknas dock som funktionella trots att de inte har denna egenskap. Funktionell programmering bygger på en matematisk grund, lambdakalkyl, vilket kan leda till ökade möjligheter till automatisk analys av funktionella program, till exempel i syfte att bevisa att programmet har en viss egenskap eller att en viss optimering är giltig.
+
+Objektorienterad programmering
+Huvudartikel: Objektorienterad programmering
+
+Andra tidiga idéer för modularisering av program handlade om att dela in koden efter de begrepp eller data som programmet hanterade. För vissa typer av problem är detta en mycket naturlig och intuitiv indelningsgrund. Ska man till exempel göra ett program för en bank är det naturligt att det finns en modul för konto och en för kontoinnehavare och så vidare. När dessa idéer kopplades till idéer om att information i en modul skulle inkapslas eller döljas i så stor utsträckning som möjligt för de andra modulerna så fick man effekten att förändringar av programmet ofta kunde begränsas till enstaka moduler och mindre ofta fick förändringarna oförutsedda effekter i andra delar av programmet.
+
+På 1980-talet tillkom idén att begreppen bakom modulerna inte var oberoende av varandra utan kunde ses som förfiningar eller specialiseringar av ett grundbegrepp i olika nivåer så att man fick en hierarki av relaterade objekt där egenskaper kunde ärvas från överordnat till underordnat objekt. Exempelvis kunde ett bankkonto förfinas i sparkonto och kreditkonto med något olika egenskaper. De allra första ursprungen till denna objektorienterade programmering hade kommit redan i slutet på 1960-talet med språket Simula 67 men det var först med programspråket Smalltalk från Xerox omkring 1980 och C++ i slutet av 1980-talet som idéerna fick större spridning. Idéerna bakom objektorienterad programmering har, i likhet med den tidigare strukturerade programmeringen, fått en mycket stor acceptans och stöd för denna paradigm finns i en eller annan form i de flesta av de nyare programspråken. Fördelar som brukar framhållas är att funktioner som är gemensamma för många olika slags objekt/begrepp bara behöver kodas en gång och kan återanvändas av alla de objekt som behöver dem. Endast de funktioner som verkligen är olika mellan olika underordnade objekt behöver programmeras om. För att skilja mellan objektorienterad programmering och det "gamla" sättet att programmera myntades begreppet procedurell programmering för det traditionella sättet. En omdebatterad fråga har varit om multipelt arv är nödvändigt eller inte. Med detta menas att ett begrepp ibland kan ses som en specialisering av flera olika överordnade begrepp. Till exempel kan objektet Lejon betraktas både som ett däggdjur och som ett rovdjur. Multipelt arv innebär vissa komplikationer som av vissa anses vara allvarligare än de fördelar som möjligheten ger.
+
+Starkt knutet till objektorientering är också de idéer om designmönster som utvecklades under senare delen av 1990-talet, med bland annat den epokgörande boken Design patterns, Elements of Reusable Object-Oriented Software av Erich Gamma, Richard Helm, Ralph Johnson och John Vlissides från 1995.
+
+Logikprogrammering
+Ett annat spår inom programmering är logikprogrammering. Här ligger tyngdpunkten på att samla fakta och regler. Genom deduktion eller induktion kan sedan olika resultat automatiskt härledas. Logikprogrammering är nära besläktad med Artificiell intelligens (AI). Det mest kända programspråket för logikprogrammering är Prolog.
+
+Historia
+Ada lovelace.jpg
+Äran som den första programmeraren brukar tilldelas Ada Lovelace, dotter till Lord Byron. Hon hjälpte Charles Babbage i dennes arbete med den analytiska maskinen som brukar betraktas som det första exemplet på en dator, trots att den aldrig blev färdigställd. Programspråket Ada är uppkallat efter henne.[1]
+
+Exempel
+Följande är ett exempel på hur en hemsida beskriven med HTML använder JavaScript för att skriva ut "Klockan är nu hh:mm:ss":
+
+<html>
+  <head>
+    <title>Exempel - JavaScript</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var tid = new Date(); // Ger aktuell tidsinformation
+      var timme = tid.getHours(); // Ger timmen från 0 till 23
+      var minut = tid.getMinutes(); // Ger minuten från 0 till 59
+      var sekund = tid.getSeconds(); // Ger sekunden 0 till 59
+      if (timme < 10) {
+          timme = "0" + timme; // Gör h till hh
+      }
+      if (minut < 10) {
+          minut = "0" + minut; // Gör m till mm
+      }
+      if (sekund < 10) {
+          sekund = "0" + sekund; // Gör s till ss
+      }
+      document.write("Klockan är nu " + timme + ":" + minut + ":" + sekund); // skriv ut tiden
+    </script>
+  </body>
+</html>
+Ett konsolapplikationsexempel i C++ för Windows. Skriver som ovan ut "Klockan är nu hh:mm:ss" och inväntar en knapptryckning före avslut.
+
+#include <iostream>
+#include <windows.h>
+using namespace std;
+ 
+int main()
+{
+    SYSTEMTIME tiden;
+    GetLocalTime(&tiden);
+    int timme = tiden.wHour;
+    int minut = tiden.wMinute;
+    int sekund = tiden.wSecond;
+    cout << "Klockan är nu "
+         << setfill('0') << setw(2)
+         << timme << ":" << minut
+         << ":" << sekund << endl;
+    cin.get(); //Väntar på inmatning från användaren så att programmet inte stängs ner direkt när det körs
+    return 0;
+}
+Liknande program i C, (ger utskrift i format "Dagnamn Månad Dagtal Timme:Minut:Sekund Årtal") och inväntar nyradstecken eller annan signal (Ctrl-C etc).
+
+#include <stdio.h>
+#include <time.h>
+
+int main(void)
+{
+    time_t t;
+    time(&t);
+    puts(ctime(&t));
+    getchar();
+
+    return 0;
+}
+Här så har man skrivit "Hello World" koden i Java.
+
+public class Hello {
+    public static void main(String[] args) {
+      System.out.println("Hello World!");
+    }
+}
+Se även
+Programspråk
+Programvarutestning
+Programvaruutveckling
+Referenser
+Noter
+^ ”Short Sharp Science: Celebrating Ada Lovelace: the 'world's first programmer'”. www.newscientist.com. Läst 22 december 2015.
+Externa länkar
+Go to statement considered harmful, Dijkstras berömda artikel
+Why Functional Programming Matters
+Object-orienterad programmerings FAQ
+Länksamling om programmering och systemutveckling - Joel.reddit
+Kategori: Programmering
+Navigeringsmeny
+Inte inloggad
+Diskussion
+Bidrag
+Skapa konto
+Logga in
+ArtikelDiskussion
+LäsRedigeraRedigera wikitextVisa historikSök
+Sök på Wikipedia
+Huvudsida
+Introduktion
+Deltagarportalen
+Bybrunnen
+Senaste ändringarna
+Slumpartikel (−bot)
+Ladda upp filer
+Stöd Wikipedia
+Kontakta Wikipedia
+Hjälp
+På andra projekt
+Commons
+Skriv ut/exportera
+Skapa en bok
+Ladda ner som PDF
+Utskriftsvänlig version
+Verktyg
+Sidor som länkar hit
+Relaterade ändringar
+Specialsidor
+Permanent länk
+Sidinformation
+Använd som referens
+Wikidata-objekt
+
+Språk
+Deutsch
+Eesti
+English
+Español
+हिन्दी
+Русский
+Suomi
+اردو
+中文
+74 till
+Redigera länkar
+Sidan redigerades senast den 30 december 2020 kl. 13.10.
+Wikipedias text är tillgänglig under licensen Creative Commons Erkännande-dela-lika 3.0 Unported. För bilder, se respektive bildsida (klicka på bilden). Se vidare Wikipedia:Upphovsrätt och användarvillkor.
+Wikimedias integritetspolicyOm WikipediaFörbehållMobil vyUtvecklareStatistikInformation om kakorWikimedia FoundationPowered by MediaWiki

@@ -1,0 +1,10 @@
+def ac():
+    line = input("Enter the amount of the alcoholic drink (l).:")
+    aald = float(line)
+    line = input("Enter the alcohol content of the alcoholic drink (%).: ")
+    poa = float(line)
+    line = input("How much non-alcoholic drink do you want to add (l)?: ")
+    adnal = float(line)
+    countAL = (poa * aald) / (aald + adnal)
+    print("Alcohol content of the drink is",countAL,"%")
+ac()
