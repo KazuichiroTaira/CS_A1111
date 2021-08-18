@@ -1,87 +1,77 @@
-def loan_calculator(a_list, total_interest):
-
-    amount_of_loan, saving, loan_period = a_list
-
-    result = amount_of_loan * ((1 + total_interest / 100) ** loan_period * total_interest / 100) / (
-                (1 + total_interest / 100) ** loan_period - 1)
-
-    return result
+RIR = 1.3     #reference interest rate
 
 
 def main():
-    # flag = True
 
-    a_list = []
-    # line = input("How much costs the house (euros)?\n")
-    line = 150000
-    amount_of_loan = int(line)
-    a_list.append(amount_of_loan)
+    line = input("How much costs the house (euros)?\n")
+    cost_house = int(line)
 
-    # line = input("How much savings do you have (euros)?\n")
-    line = 10000
+    line = input("How much savings do you have (euros)?\n")
     saving = int(line)
-    a_list.append(saving)
 
-    # line = input("What is the loan period (years)?\n")
-    line = 15
-    period = int(line)
-    a_list.append(period)
+    line = input("What is the loan period (years)?\n")
+    loan_period = int(line)
 
-    bank_and_interest = {}
+    amount_of_loan = cost_house - saving
 
-    bank = 'a'
-    # line = input("What is the opening costs in bank A (eur)?\n")
-    line = 459
+### banks ###
+
+    banks = {}
+
+    bank = "a"
+    line = input("What is the opening costs in bank A (eur)?\n")
     opening_cost_a = int(line)
-    # line = input("What is the loan margin in bank A (percentage)?\n")
-    line = 0.65
-    total_interest_a = float(line)
+    line = input("What is the loan margin al in bank A (percentage)?\n")
+    loan_margin_a = float(line)
 
-    r_a = loan_calculator(a_list, total_interest_a)
+    total_interest_a = loan_margin_a + RIR
 
-    bank_and_interest[bank] = r_a, opening_cost_a
+    r_a = amount_of_loan * ((1 + total_interest_a / 100) ** loan_period * total_interest_a / 100) / (
+            (1 + total_interest_a / 100) ** loan_period - 1)
 
-    bank = 'b'
-    # line = input("What is the opening costs in bank B (eur)?\n")
-    line = 280
+    total_payment_a = r_a * loan_period + opening_cost_a
+    cost_a = total_payment_a - amount_of_loan
+    banks[bank] = cost_a, total_payment_a
+
+    bank = "b"
+    line = input("What is the opening costs in bank B (eur)?\n")
     opening_cost_b = int(line)
-    # line = input("What is the loan margin in bank B (percentage)?\n")
-    line = 0.8
-    total_interest_b = float(line)
+    line = input("What is the loan margin al in bank B (percentage)?\n")
+    loan_margin_b = float(line)
 
-    r_b = loan_calculator(a_list, total_interest_b)
-    bank_and_interest[bank] = r_b, opening_cost_b
+    total_interest_b = loan_margin_b + RIR
 
-    bank = 'c'
-    # line = input("What is the opening costs in bank C (eur)?\n")
-    line = 356
+    r_b = amount_of_loan * ((1 + total_interest_b / 100) ** loan_period * total_interest_b / 100) / (
+            (1 + total_interest_b / 100) ** loan_period - 1)
+
+    total_payment_b = r_b * loan_period + opening_cost_b
+    cost_b = total_payment_b - amount_of_loan
+
+    banks[bank] = cost_b, total_payment_b
+
+    bank = "c"
+    line = input("What is the opening costs in bank C (eur)?\n")
     opening_cost_c = int(line)
-    # line = input("What is the loan margin in bank C (percentage)?\n")
-    line = 0.7
-    total_interest_c = float(line)
+    line = input("What is the loan margin al in bank C (percentage)?\n")
+    loan_margin_c = float(line)
 
-    r_c = loan_calculator(a_list, total_interest_c)
-    bank_and_interest[bank] = r_c, opening_cost_c
+    total_interest_c = loan_margin_c + RIR
 
-    print(bank_and_interest)
+    r_c = amount_of_loan * ((1 + total_interest_c / 100) ** loan_period * total_interest_c / 100) / (
+            (1 + total_interest_c / 100) ** loan_period - 1)
 
-    for i in bank_and_interest:
-        print(i)
-        r, opening_cost = bank_and_interest[i]
-        result = (r * 15) + opening_cost
-        print(result)
-        # r = bank_and_interest[i] * 15
-        # print(f"{r:.2f}")
+    total_payment_c = r_c * loan_period + opening_cost_c
+    cost_c = total_payment_c - amount_of_loan
+    banks[bank] = cost_c, total_payment_c
 
-    # min_val = min(bank_and_interest.values())    #minimum values
-    # min_key = [k for k, v in bank_and_interest.items() if v == min_val]
-    # print(min_key, min_val)   # <- this is the cheapest!!
+    min_val = min(banks.values())  # minimum values
+    min_keys_list = [k for k, v in banks.items() if v == min_val]
+    min_key = min_keys_list[0]
+    cost, cheapest_total_payment = min_val
 
-    # total = min_val * 15
-
-    # print(f"The bank {min_key} is the cheapest.")
-    # print(f"The costs for {period: d} years loan are {cheapest:.2f} euros.")
-    # print(f"The total payment is {total: .2f} euros excluding own funding of {savings: .2f} euros.")
+    print(f"The bank {min_key.upper()} is the cheapest.")
+    print(f"The costs for {loan_period} years loan are {cost:.2f} euros.")
+    print(f"The total payment is {cheapest_total_payment:.2f} euros excluding own funding of {saving:.2f} euros.")
 
 
 main()

@@ -26,10 +26,10 @@ def main():
     bank = "a"
 
     # line = input("What is the opening costs in bank A (eur)?\n")
-    line = 459
+    line = 356
     opening_cost_a = int(line)
     # line = input("What is the loan margin in bank A (percentage)?\n")
-    line = 0.65
+    line = 0.7
     loan_margin_a = float(line)
 
     total_interest_a = loan_margin_a + RIR
@@ -44,10 +44,10 @@ def main():
 
     bank = "b"
     # line = input("What is the opening costs in bank B (eur)?\n")
-    line = 280
+    line = 459       # 280
     opening_cost_b = int(line)
     # line = input("What is the loan margin in bank B (percentage)?\n")
-    line = 0.8
+    line = 0.65      # 0.8
     loan_margin_b = float(line)
 
     total_interest_b = loan_margin_b + RIR
@@ -63,10 +63,10 @@ def main():
     bank = "c"
 
     # line = input("What is the opening costs in bank C (eur)?\n")
-    line = 356
+    line = 459 #356
     opening_cost_c = int(line)
     # line = input("What is the loan margin in bank C (percentage)?\n")
-    line = 0.7
+    line = 0.65   #0.7
     loan_margin_c = float(line)
 
     total_interest_c = loan_margin_c + RIR
@@ -78,7 +78,7 @@ def main():
     cost_c = total_payment_c - amount_of_loan
 
     banks[bank] = cost_c, total_payment_c
-
+    print(banks)
     min_val = min(banks.values())  # minimum values
     min_keys_list = [k for k, v in banks.items() if v == min_val]
     min_key = min_keys_list[0]
