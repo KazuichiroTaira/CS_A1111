@@ -1,6 +1,6 @@
-def error_check(line):
+def error_check(content):
     try:
-        num_check = line[1:]
+        num_check = content[1:]
 
     except IndexError:
         return True
@@ -39,54 +39,60 @@ def travel_rest_def(ratio_per_100ths):
 def main():
     filename = input("Enter the name of the file to be read:\n ")
     # filename = "statistics2.txt"
-    open_file = open(filename, 'r')
     amount = []
 
-    for line in open_file:
-        line = line.strip()
 
-        if line == "":
-            print(f"Incorrect line: {line}")
+    try:
+        open_file = open(filename, 'r')
 
-        try:
-            content = line.split(",")
+        for line in open_file:
+            line = line.strip()
 
-        except ValueError:
-            print(f"Incorrect line: {line}")
-            continue
+            try:
+                content = line.split(",")
 
-        error = error_check(content)
+            except line == "":
+                print(f"Incorrect line: {line}")
+                continue
 
-        if error:
-            print(f"Incorrect number in line: {line}")
-            continue
+            error = error_check(content)
 
-        try:
-            country = content[0]
-            inhabitant = int(content[1])
-            cases = int(content[2])
+            if error:
+                print(f"Incorrect number in line: {line}")
+                continue
 
-        except IndexError:
-            print(f"Incorrect number in line: {line}")
-            continue
+            try:
+                country = content[0]
+                inhabitant = int(content[1])
+                cases = int(content[2])
 
-        ratio_per_100ths = cal_ratio(inhabitant, cases)
+            except IndexError:
+                print(f"Incorrect line: {line}")
+                continue
 
-        travel_rest = travel_rest_def(ratio_per_100ths)
+            ratio_per_100ths = cal_ratio(inhabitant, cases)
 
-        amount.append(travel_rest)
+            travel_rest = travel_rest_def(ratio_per_100ths)
 
-        if travel_rest == 2:
-            print(f"{country:s} ({ratio_per_100ths:.1f} cases per 100000 inhabitants): travel restrictions apply.")
+            amount.append(travel_rest)
+
+            if travel_rest == 2:
+                print(f"{country:s} ({ratio_per_100ths:.1f} cases per 100000 inhabitants): travel restrictions apply.")
+
+            else:
+                print(f"{country:s} ({ratio_per_100ths:.1f} cases per 100000 inhabitants): no travel restrictions.")
+
+        if amount.count(2) > 0:
+            print(f"Travel restrictions apply to {amount.count(2):d} countries.")
 
         else:
-            print(f"{country:s} ({ratio_per_100ths:.1f} cases per 100000 inhabitants): no travel restrictions.")
+            print("There were no countries in the file.")
 
-    if amount.count(2) < 0:
-        print(f"Travel restrictions apply to {amount.count(2):d} countries.")
+    except FileNotFoundError:
+        print(f"Error in reading the file {filename}. Program ends.")
 
-    else:
-        print("")
+    except OSError:
+        print("There were no countries in the file.")
 
 
 main()
