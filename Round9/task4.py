@@ -26,6 +26,7 @@ def read_lap_time():
 
 # A helper function for reading an integer
 
+
 def read_integer():
     success = False
     while not success:
@@ -37,6 +38,7 @@ def read_integer():
     return inputted_integer
 
 # Reads new Driver instances and returns them in a list.
+
 
 def create_drivers(names, teams):
     print("Creating new drivers...")
@@ -50,6 +52,7 @@ def create_drivers(names, teams):
 
 # Asks for input and records a new lap time for a driver.
 # A list of all Drivers is given as as list
+
 
 def record_a_lap_time(drivers):
     if len(drivers) == 0:
