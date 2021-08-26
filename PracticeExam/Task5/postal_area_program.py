@@ -113,8 +113,8 @@ def print_areas(first, second):
     print(PAM.PostalArea.__str__(second)) ---> x
     """
 
-    first_area = first.PAM.PoatalArea.__str__()
-    second_area = second.__str__()
+    first_area = str(first)
+    second_area = str(second)
 
     print("Area information:")
     print(first_area)

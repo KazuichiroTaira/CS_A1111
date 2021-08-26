@@ -43,7 +43,9 @@ class PostalArea:
             self.__negative = 0
 
         # deads
-        self.__dead += deads
+        if deads > 0:
+            self.__dead += deads
+
 
     def calculate_ratio_of_sick(self):
         """
@@ -53,11 +55,13 @@ class PostalArea:
         """
 
         covid_positives = self.get_positives()
-        population_of_ara = self.__people()
+        population_of_ara = self.__people
 
-        ratio_of_sick = covid_positives / population_of_ara
+        if population_of_ara > 0:
 
-        if population_of_ara == 0:
+            ratio_of_sick = covid_positives / population_of_ara
+
+        else:
             ratio_of_sick = 0
 
         return ratio_of_sick
