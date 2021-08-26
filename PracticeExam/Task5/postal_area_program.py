@@ -57,13 +57,12 @@ def check_amount_of_sick(area):
     that indicate the relative amount of recipients.
     """
 
-    area.calculate_ration_of_sick()
-    amount = area.calculate_ration_of_sick()     # Add a method call....? initially amount were signed as 0
-    area_code = area.get_code()       # Add a method call
+    amount = area.calculate_ratio_of_sick()     # Add a method call
+    area_code = area.get_code()                 # Add a method call
 
     amount = amount * 100
 
-    print(f"{amount:.2f}% of people interested in postal area "
+    print(f"{amount:.2f}% of people living in postal area "
           f"{area_code:s} have got a positive corona test result.")
 
 
@@ -95,7 +94,7 @@ def which_has_higher_ratio(first_area, second_area):
 
     area = None
 
-    if compare:
+    if compare is False:
         area = second_area
     else:  # type the correct command
         area = first_area
@@ -108,11 +107,18 @@ def which_has_higher_ratio(first_area, second_area):
 def print_areas(first, second):
     """
     Print the data of the regions using their __str __ method correctly.
+
+    Note: I guess I should not call it directly...
+    print(PAM.PostalArea.__str__(first))  ---> x
+    print(PAM.PostalArea.__str__(second)) ---> x
     """
 
+    first_area = first.PAM.PoatalArea.__str__()
+    second_area = second.__str__()
+
     print("Area information:")
-    print(PAM.PostalArea.__str__(first))
-    print(PAM.PostalArea.__str__(second))
+    print(first_area)
+    print(second_area)
 
 
 def main():

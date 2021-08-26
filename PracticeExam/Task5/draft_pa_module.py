@@ -10,10 +10,10 @@ class PostalArea:
     def get_code(self):
         return self.__code
 
-    def get_positive(self):
+    def get_positives(self):
         return self.__positive
 
-    def get_negative(self):
+    def get_negatives(self):
         return self.__negative
 
     def get_dead(self):
@@ -45,17 +45,17 @@ class PostalArea:
         # deads
         self.__dead += deads
 
-    def calculate_ration_of_sick(self):
+    def calculate_ratio_of_sick(self):
         """
         The method returns the proportion of people living in
         the area who tested positive. The proportion is zero if
         the number of people living in the area is zero.
         """
 
-        covid_positive = self.get_positive()
-        population_of_ara = self.__people
+        covid_positives = self.get_positives()
+        population_of_ara = self.__people()
 
-        ratio_of_sick = covid_positive / population_of_ara
+        ratio_of_sick = covid_positives / population_of_ara
 
         if population_of_ara == 0:
             ratio_of_sick = 0
@@ -68,9 +68,16 @@ class PostalArea:
         people in the area who have tested positive for the
         corona test in this area than in the other_area area,
         and otherwise returns False.
+
+        Note: it can be like below...But cleaner is the one implimented
+        greater = True
+        first_area = self.calculate_ratio_of_sick()
+        second_area = other_area.calculate_ratio_of_sick()
+        if first_area < second_area:
+             greater = False
         """
 
-        greater = self.calculate_ration_of_sick() < other_area.calculate_ration_of_sick()
+        greater = self.calculate_ratio_of_sick() > other_area.calculate_ratio_of_sick()
 
         return greater
 
@@ -78,7 +85,7 @@ class PostalArea:
         # The method returns a string that looks like this:
         # area code: 02150, people: 22696, positive: 42, negative: 3496, dead: 0
 
-        info = f"area code:{self.__code}, people:{self.__people}, positive:{self.__positive}, " \
-               f"negative:{self.__negative}, dead: {self.__dead}"
+        info = f"area code: {self.__code}, people: {self.__people}, positive: {self.__positive}, " \
+               f"negative: {self.__negative}, dead: {self.__dead}"
 
         return info
